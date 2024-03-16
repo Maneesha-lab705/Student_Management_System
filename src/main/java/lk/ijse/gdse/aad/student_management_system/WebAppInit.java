@@ -24,7 +24,7 @@ public class WebAppInit extends AbstractAnnotationConfigDispatcherServletInitial
 
     @Override
     protected void customizeRegistration(ServletRegistration.Dynamic registration) {
-        registration.setMultipartConfig(new MultipartConfigElement("'/tmp"));
+        registration.setMultipartConfig(new MultipartConfigElement("C:\\Users\\ASD\\AppData"));
     }
 }
 

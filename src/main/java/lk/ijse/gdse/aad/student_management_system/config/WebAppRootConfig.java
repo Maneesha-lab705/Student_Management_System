@@ -21,8 +21,8 @@ import javax.sql.DataSource;
 @ComponentScan(basePackages = "lk.ijse.gdse.aad.student_management_system")
 @EnableWebMvc
 @EnableJpaRepositories("lk.ijse.gdse.aad.student_management_system")
-@EnableTransactionManagement
-@MultipartConfig(location = "/tmp",maxFileSize = 1024*1024*10,maxRequestSize = 1024*1024*50,fileSizeThreshold = 1024*1024*5)
+@EnableTransactionManagement//
+@MultipartConfig(location = "C:\\Users\\ASD\\AppData",maxFileSize = 1024*1024*10,maxRequestSize = 1024*1024*50,fileSizeThreshold = 1024*1024*5)
 public class WebAppRootConfig {
     @Bean
     ModelMapper modelMapper(){
