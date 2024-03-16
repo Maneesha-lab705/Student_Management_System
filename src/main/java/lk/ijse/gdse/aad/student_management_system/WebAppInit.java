@@ -1,5 +1,7 @@
 package lk.ijse.gdse.aad.student_management_system;
 
+import jakarta.servlet.MultipartConfigElement;
+import jakarta.servlet.ServletRegistration;
 import lk.ijse.gdse.aad.student_management_system.config.WebAppConfig;
 import lk.ijse.gdse.aad.student_management_system.config.WebAppRootConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -19,4 +21,11 @@ public class WebAppInit extends AbstractAnnotationConfigDispatcherServletInitial
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
+
+    @Override
+    protected void customizeRegistration(ServletRegistration.Dynamic registration) {
+        registration.setMultipartConfig(new MultipartConfigElement("'/tmp"));
+    }
 }
+
+
